@@ -24,5 +24,5 @@ tempfile = { workspace = true }
 thiserror = { workspace = true }
 tracing = { workspace = true, features = ["attributes"] }
 tracing-subscriber = { workspace = true, features = ["json", "env-filter"] }
-regex = { workspace = true, features = ["std"] }
-clap = { workspace = true, features = ["std", "suggestions", "derive", "cargo", "help", "usage", "error-context"] }
+regex = { workspace = true }
+clap= { workspace = true, features = ["std", "suggestions", "derive", "cargo", "help", "usage", "error-context"] }

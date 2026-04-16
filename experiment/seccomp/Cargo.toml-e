@@ -1,0 +1,34 @@
+[package]
+name = "seccomp"
+version = "0.0.0"
+description = "Library for seccomp"
+license = "Apache-2.0"
+repository = "https://github.com/youki-dev/youki"
+homepage = "https://youki-dev.github.io/youki/"
+readme = "README.md"
+authors = ["youki team"]
+edition = "2024"
+autoexamples = true
+keywords = ["youki", "container", "seccomp"]
+
+[dependencies]
+nix = { version = "0.29.0", features = [
+    "ioctl",
+    "socket",
+    "sched",
+    "mount",
+    "dir",
+] }
+thiserror = "1.0.57"
+prctl = "1.0.0"
+anyhow = "1.0"
+syscall-numbers = "3.1.1"
+syscalls = { version = "0.6.18", features = ["std", "serde", "aarch64", "x86_64"]}
+oci-spec = { version = "0.9.0", features = ["runtime"] }
+serde_json = "1.0.138"
+derive_builder = "0.20.2"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+libseccomp = "0.4.0"
+tempfile = "3.27.0"
